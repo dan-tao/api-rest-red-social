@@ -1,0 +1,2 @@
+start "" cmd.exe /k cd /d "C:\Program Files\MongoDB\Server\8.0\bin" ^&^& mongod.exe --dbpath "D:\Proyects\React express\SN\api-rest-red-social\data\db"
+start "" cmd.exe /k cd /d "D:\Proyects\React express\SN\api-rest-red-social" ^&^& npm start
