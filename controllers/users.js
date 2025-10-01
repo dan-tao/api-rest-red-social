@@ -1,6 +1,6 @@
 // Importar modelo de usuario
 const User = require("../models/users");
-const bcrypt = require("bcrypt");
+const argon2 = require("argon2");
 
 const pruebaUser = (req, res) => {
   return res.status(200).send({
@@ -37,7 +37,7 @@ const register = async (req, res) => {
     }
 
     // Cifrar la contraseña
-    let pwd = await bcrypt.hash(params.password, 10);
+    let pwd = await argon2.hash(params.password);
     params.password = pwd;
 
     // Crear objeto de usuario
